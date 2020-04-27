@@ -1,0 +1,158 @@
+
+.concepts principles  patterns (Quick Solution)
+
+UML - intro
+
+
+Object - "SPACE"  , "ROLE" , "Responsibilities"
+
+"Requirements - Functionality"
+1. "Classification" - "Define Role and Assign Responsibilities" - Encapsulation	
+			
+		      "Define Role - Too many , unrelated Responsibilities"
+
+			When Encapsulation - Wrong - "Technical Debt"
+
+class Employee{
+
+	//Encapsualte 
+	//Responsibilities
+}
+
+SOLID
+
+Concepts --------------------Guarded By------------Principles
+
+Encapsulation					   Single Responsibility Principle
+
+
+
+Probleam statement
+
+ExportTool
+
+patients.csv
+	MRN,Name,Age,Email,PhoneNumber,City,State,Country
+Patients.xml
+		<Patient MRN="" ...................> </Patient>
+
+Validation
+	MRN-> starst with "MRN"
+	Name-> Required
+	Age->  >0 <100
+	Email-> format internet Mail Address
+	Phonenumber -> Country Specific
+	Country -> Required
+
+Log Validation Error Messages to log file -> LineNumber
+
+Better Name Convention -> "Role"
+
+Resposibilities / Functionality
+
+1.Read Patient Details from CSV 
+2.Validate Patient Details
+3.Write Validation Messages to Log File
+4.Write Valid Patient Objects to XML File
+
+
+Representing Patient Information - Information Holder - Patient / PatientModel
+
+Read Patient Details from CSV  -  CSVFileReader -  CSVPatientDataReader
+								-fileName:string
+								+CSVPatientDataReader(fileName:string):void
+								GetAllRecodrs():List<PatientModel>
+								+validateFile():bool
+Validate Patient Details - PatientCSVLineContentValidator
+								+ValidatLine(lineContent:string):bool
+								
+Write Validation Messages to Log File- FileLogger 
+								-fileName:String
+								+FileLogger(fileName:String):void
+								+write(message:string):void
+Write Valid Patient Objects to XML File - PatientXMLDataWriter
+								-fileName:string
+								+PatientXMLDataWriter(fileName:string)
+								 +WriteObject(patientContent:Patient)
+
+Collaborater - PatientDataConverter				+GetPatientRecords():List<Patient>
+								+WritePatientRecords(List<Patient>):void
+
+
+UML -> Diagrams -> Low Level Design
+				Class Diagram 
+				Object Diagram
+				Sequence Diagram
+				RelationShip Diagram
+				Note
+				SteroType
+			
+
+Any tool : StarUml, Visio, Eclipse, EA , Archimate, Gliffy (onlinetool)
+
+
+
+
+https://classroom.github.com/a/a2mf3IGT
+
+
+Why do u hold relationship ?
+
+Reuse other Object Roles and Responsibilities
+
+
+OOAD 
+		Two Types of Reusability
+			Complete Code Reuse - Class Reuse
+			Space Reuse - Object Reuse
+
+
+Complete Code Reuse - Class Resue
+Inheritance Concept -  "is-a"
+		       "Base-Derived"
+		       "Parent-Child"
+		       "Generalization-Specialization"
+		        --------------------------------------------
+			Static Relationship or Compiletime Relationship
+
+
+Role B inheirts Role A,A!
+
+Role B assmues Responsibilities of Role A
+
+"Birth" - "New Member of Family"
+
+		Re-Compile
+Inheritance= ------------------
+        	Change in the Reuse
+
+"Commonality and Variation"
+
+"DRY" - DO not Repeat YourSelf " - 
+
+SEH -> Exception ---------->NullReference,FileNotFound
+IO -> Stream -> NetworkStream, MemoryStream , FileStream, BinaryStream
+UI-> Control -> Window,TextBox,Button
+	  
+1.Static Relationship - ReCompile
+2.Reusability - OneWay
+3.Ripple Effect - Change in the Parent --->Effect on Child---> Dependencies of Child must Change
+4.Diamond Problem - "Redundency and Ambig
+
+
+"Semantic Rules and Mechanic Rules " - Inheritance
+"Why Inheitance - Additive Nature"
+"Peter Principle"
+"Does Inheiratnce- Inherits interface or Implementaion or Both"
+
+
+
+
+
+
+
+
+
+
+
+
