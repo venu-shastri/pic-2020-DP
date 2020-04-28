@@ -24,6 +24,9 @@ SOLID
 Concepts --------------------Guarded By------------Principles
 
 Encapsulation					   Single Responsibility Principle
+Uses (Composition				   Dependency Inversion Principle - Abstraction
+	&
+      Aggregation)
 
 
 
@@ -144,6 +147,177 @@ UI-> Control -> Window,TextBox,Button
 "Why Inheitance - Additive Nature"
 "Peter Principle"
 "Does Inheiratnce- Inherits interface or Implementaion or Both"
+
+
+
+Hierarchy of roles
+
+Commanality----------------------------------->Variation (Additive)
+Parent---------------------------------->Descedent
+ Fuctionality ++++++++++++++++++++++++++++
+
+//Complete Code Reuse
+class A{
+
+		M1....Mn
+}
+
+class  B inherits A{
+
+	//Shadowing
+	M2(){ throw new NotImplentedExcetpion()
+
+}
+
+Athlete
+	B-Athelete
+		Tri-Athlete
+
+
+
+
+
+
+Family class 
+
+			Commanality
+
+	A.....................................Z
+
+Code Verisoning
+
+V1---->V2
+
+
+Control--------->TextBox----------->NumericTextBox
+		 Button------------>ImgeButton
+
+
+Obejct has - Default Interface
+			"Default Public View Of An Object"
+			"Public Members Of Class"
+
+
+Inheritance Usage
+1.Complete Code Reuse
+2.Substitution
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+Object Reuse - space -Reuse 
+		Uses Relationship (has-a) (has-have-had)
+
+One Role Instance "Uses" Another Role Instance
+
+			Dynamic Relationship / Runtime RelationShip
+			"Marriage" - > Change
+
+				Associate - Association
+				Contains - Composition
+				Holds - Aggregation
+
+Advantages Of Uses over Is-a
+
+1.Dynamic - Change - Restart
+		Re-Start
+Uses= ------------------
+        	Change in the Reuse
+
+2.No Ripple Effect
+3.Reusability Two-Way
+4.Lazy Instantiation (Instantiate On Demand / Use on Demand)
+5.Dynamic Change in The Cardinality (number of instances participate in given relationship)
+6."Enables Subtituion in the relationship"
+
+
+
+Uses Relationship 
+
+ A depends on B (Tightly Coupled)
+ A depends on Abstraction of B,B2,B3,B4 (loosly Coupled)
+
+DIP
+
+High Level Module :- Referer - One who is in the need Of Service
+Low Level Module - Referenced - One Who Offer Service
+
+
+High Level Module				Low Level Module
+
+Person -> Commute        "Mode of Transport"	 Car , Bike, Public Transport , Cab Services
+
+
+Encapsulation
+
+	Code Reuse ---> Inheritance
+	Object reuse  -----> Composition/aggregation --->Loosly Copuled--->Abstraction
+
+
+Car uses(contains) Engine 
+
+Composition - Death Relationship
+
+Person -> Contains *Ego/attitude
+		   *Knowledge
+
+
+How to program for 
+	Changes
+	Adaptibility
+	Unit testability
+
+Abstraction 
+	
+
+
+is-a / has-a
+
+"Uses/Dependes"
+
+1.CSVPatientDataReader uses  PatientCSVLineContentValidator
+2.PatientCSVLineContentValidator  FileLogger
+3.PatientDataConverter	 CSVPatientDataReader  and PatientXMLDataWriter	
+
+
+Uses
+ A(HLM) uses B(LLM)
+	Associate- Association - Referential Attribute or Third Party Classes
+
+
+	Contain - Composition 
+	Holds    - Aggregation
+			
+
+
+
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
