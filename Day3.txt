@@ -1,0 +1,43 @@
+Observer Pattern - 
+		Runtime Polymorhism ( Sustitution)
+				"Costly Calls - V-Table Fixup "
+				Two Pointers
+			"Follow SRP'
+
+		Compiler - support - Inheritance
+
+
+"Alternative for RuntimePolymorphism" = "Function Pointers"
+
+C#,Java
+
+
+"LooslyCoupled Solution"
+
+
+
+Source			interface			Target
+			Address Of Method in Target
+
+"Seperator Pattern" =Command Pattern (Delegate)/ Object Adapter Pattern
+
+"Encasulate Request"
+
+CommandSource-------------->Execute---->CommandObject------------->CommandTarget
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
